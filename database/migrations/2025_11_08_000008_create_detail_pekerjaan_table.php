@@ -14,9 +14,9 @@ return new class extends Migration {
             $table->timestamps();
 
             $table->foreign('job_id')->references('job_id')->on('jobs')
-                  ->cascadeOnUpdate()->restrictOnDelete();
+                ->cascadeOnUpdate()->restrictOnDelete();
             $table->foreign('component_id')->references('component_id')->on('komponen')
-                  ->cascadeOnUpdate()->restrictOnDelete();
+                ->cascadeOnUpdate()->restrictOnDelete();
             $table->unique(['job_id', 'component_id']);
         });
     }

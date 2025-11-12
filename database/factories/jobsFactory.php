@@ -20,7 +20,7 @@ class jobsFactory extends Factory
     {
 
         return [
-            'No_SP' => SuratPenawaran::factory(),
+            'sp_id' => \App\Models\SuratPenawaran::inRandomOrder()->value('sp_id'),
             'Nama_Pekerjaan' => $this->faker->sentence(3),
             'Nama_Mesin' => $this->faker->word(),
             'Spesifikasi_Mesin' => $this->faker->text(50),

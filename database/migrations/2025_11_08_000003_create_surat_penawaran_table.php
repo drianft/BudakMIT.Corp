@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void {
         Schema::create('surat_penawaran', function (Blueprint $table) {
-            $table->string('no_sp', 64)->primary()->autoIncrement();
+            $table->id('sp_id');
+            $table->string('no_sp', 64);
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('company_id');
             $table->string('perihal', 200)->nullable();

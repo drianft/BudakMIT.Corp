@@ -15,6 +15,7 @@ class SuratPenawaran extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
+        'sp_id',
         'no_sp',
         'user_id',
         'Company_id',

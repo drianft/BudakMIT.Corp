@@ -19,7 +19,7 @@ class TagihanFactory extends Factory
     {
         return [
             'no_tag' => $this->faker->unique()->numerify('TAG-####'),
-            'No_SP' => SuratPenawaran::factory(),
+            'sp_id' => \App\Models\SuratPenawaran::inRandomOrder()->value('sp_id'),
             'Status_Pembayaran' => $this->faker->randomElement(['pending','dibayar','telat','batal']),
             'Tenggat_Pembayaran' => $this->faker->date(),
         ];

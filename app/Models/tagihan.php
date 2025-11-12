@@ -10,7 +10,7 @@ class tagihan extends Model
     use HasFactory;
     protected $fillable = [
     'no_tag',
-    'No_SP',
+    'sp_id',
     'Status_Pembayaran',
     'Tenggat_Pembayaran',
 ];
